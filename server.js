@@ -13,9 +13,9 @@ app.use(function(err, req, res, next){
 });
 
 
-app.use(express.static(path.join(__dirname, './views/build')));
+app.use(express.static(path.join(__dirname, './build')));
 app.get('*', (req, res) => {
-  res.sendfile(path.join(__dirname = './views/build/index.html'));
+  res.sendFile(path.join(__dirname = './build/index.html'));
 });
 
 app.listen(port, ip);
